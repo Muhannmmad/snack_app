@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snack_app/Home.screen.dart';
 
 void main() {
   runApp(Snack());
@@ -85,6 +86,7 @@ class SnackScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
@@ -97,7 +99,14 @@ class SnackScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomeScreen(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
