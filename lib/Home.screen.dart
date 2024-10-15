@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             child: Text('Sweet'),
                           ),
-                          SizedBox(width: 8),
+                          SizedBox(width: 16),
                           TextButton(
                             onPressed: () {},
                             style: TextButton.styleFrom(
@@ -94,10 +94,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 30),
                   Center(
                     child: Stack(
                       children: [
+                        // Card image
                         Container(
                           height: 250,
                           width: 380,
@@ -162,9 +163,9 @@ class HomeScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                                 side: BorderSide(
-                                  color: Color.fromARGB(255, 80, 33, 80)
-                                      .withOpacity(0.5),
-                                  width: 2.0,
+                                  color: Color.fromARGB(255, 233, 138, 13)
+                                      .withOpacity(0.1),
+                                  width: 3.0,
                                 ),
                               ),
                               shadowColor: Colors.black.withOpacity(1),
@@ -174,7 +175,41 @@ class HomeScreen extends StatelessWidget {
                             child: Text('Add to order'),
                           ),
                         ),
+
+                        Positioned(
+                          right: 20,
+                          top: 20,
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/grafiken/star.png',
+                                width: 20,
+                                height: 20,
+                              ),
+                              SizedBox(width: 2),
+                              Text(
+                                "4,8",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 50),
+                    child: Text(
+                      "We Recommend",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
