@@ -115,7 +115,7 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 "Angi's Yummy Burger",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -124,12 +124,12 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 "Delish vegan burger\n that tastes like heaven",
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 12,
                                   color: Colors.white.withOpacity(0.8),
                                 ),
                                 textAlign: TextAlign.left,
                               ),
-                              SizedBox(height: 16),
+                              SizedBox(height: 8),
                               Text(
                                 '\$13.99',
                                 style: TextStyle(
@@ -141,38 +141,35 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        // Positioning the burger image separately
                         Positioned(
-                          bottom: 20,
+                          bottom: -20,
                           right: 20,
                           child: Image.asset(
                             'assets/grafiken/Burger_3D.png',
-                            height: 120,
+                            height: 200,
                             fit: BoxFit.contain,
                           ),
                         ),
-
                         Positioned(
-                          bottom: 20,
+                          bottom: 30,
                           left: 20,
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
                                   const Color.fromARGB(255, 123, 42, 204),
-                              foregroundColor:
-                                  Colors.white, // Text color to white
+                              foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
+                                borderRadius: BorderRadius.circular(12),
                                 side: BorderSide(
-                                  color: Colors.orange.withOpacity(0.2),
+                                  color: Color.fromARGB(255, 80, 33, 80)
+                                      .withOpacity(0.5),
                                   width: 2.0,
                                 ),
                               ),
-                              shadowColor: Colors.black.withOpacity(0.4),
-                              elevation: 8,
+                              shadowColor: Colors.black.withOpacity(1),
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 15, vertical: 12),
+                                  horizontal: 10, vertical: 12),
                             ),
                             child: Text('Add to order'),
                           ),
