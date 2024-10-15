@@ -33,9 +33,9 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Choose Your Favorite Snack",
+                    "Choose Your Favorite \n Snack",
                     style: TextStyle(
-                      fontSize: 28,
+                      fontSize: 26,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -99,77 +99,82 @@ class HomeScreen extends StatelessWidget {
                     child: Stack(
                       children: [
                         Container(
-                          height: 300,
-                          width: 400,
+                          height: 250,
+                          width: 380,
                           child: Image.asset(
                             'assets/details/Top Card.png',
                             fit: BoxFit.cover,
                           ),
                         ),
-                        // Main Card content
                         Positioned(
                           top: 20,
                           left: 20,
-                          right: 20,
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // Burger Image
-                              Image.asset(
-                                'assets/grafiken/Burger_3D.png',
-                                height: 120,
-                                fit: BoxFit.contain,
-                              ),
-                              SizedBox(height: 16),
-                              // Burger Title
                               Text(
                                 "Angi's Yummy Burger",
                                 style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
                               ),
                               SizedBox(height: 8),
-                              // Burger Description
                               Text(
-                                "Delish vegan burger that tastes like heaven",
+                                "Delish vegan burger\n that tastes like heaven",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white.withOpacity(0.8),
                                 ),
-                                textAlign: TextAlign.center,
+                                textAlign: TextAlign.left,
                               ),
                               SizedBox(height: 16),
-                              // Price and Button Row
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    '\$13.99',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color.fromARGB(
-                                          255, 123, 42, 204),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(16),
-                                      ),
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 24, vertical: 12),
-                                    ),
-                                    child: Text('Add to order'),
-                                  ),
-                                ],
+                              Text(
+                                '\$13.99',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
                               ),
                             ],
+                          ),
+                        ),
+                        // Positioning the burger image separately
+                        Positioned(
+                          bottom: 20,
+                          right: 20,
+                          child: Image.asset(
+                            'assets/grafiken/Burger_3D.png',
+                            height: 120,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+
+                        Positioned(
+                          bottom: 20,
+                          left: 20,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 123, 42, 204),
+                              foregroundColor:
+                                  Colors.white, // Text color to white
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                                side: BorderSide(
+                                  color: Colors.orange.withOpacity(0.2),
+                                  width: 2.0,
+                                ),
+                              ),
+                              shadowColor: Colors.black.withOpacity(0.4),
+                              elevation: 8,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 15, vertical: 12),
+                            ),
+                            child: Text('Add to order'),
                           ),
                         ),
                       ],
