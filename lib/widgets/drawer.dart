@@ -30,14 +30,17 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
         ),
       ),
       Positioned(
-        top: 16,
-        right: 16,
+        top: 15,
+        right: 15,
         child: Container(
+          height: 30,
+          width: 30,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.black.withOpacity(0.2),
           ),
           child: IconButton(
+            iconSize: 15,
             icon: Icon(Icons.close, color: Colors.white),
             onPressed: () {
               Navigator.of(parentContext).pop();
