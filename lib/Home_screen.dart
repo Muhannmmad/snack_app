@@ -19,33 +19,84 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Choose Your Favorite \n Snack",
-                    style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  SizedBox(
+                    child: Text(
+                      "Choose Your Favorite \n Snack",
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 12),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: Row(
                         children: [
-                          categoryButton("All categories"),
+                          TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.white.withOpacity(0.1),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24, vertical: 12),
+                              foregroundColor: Colors.white,
+                              side: BorderSide(color: Colors.white),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.coffee_maker, color: Colors.white),
+                                SizedBox(width: 2),
+                                Text('All categories'),
+                                SizedBox(width: 2),
+                                Icon(Icons.keyboard_arrow_down,
+                                    color: Colors.white),
+                              ],
+                            ),
+                          ),
                           SizedBox(width: 8),
-                          categoryButton("Salty"),
+                          TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.white.withOpacity(0.1),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24, vertical: 12),
+                              foregroundColor: Colors.white,
+                              side: BorderSide(color: Colors.white),
+                            ),
+                            child: Text('Salty'),
+                          ),
                           SizedBox(width: 8),
-                          categoryButton("Sweet"),
+                          TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.white.withOpacity(0.1),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24, vertical: 12),
+                              foregroundColor: Colors.white,
+                              side: BorderSide(color: Colors.white),
+                            ),
+                            child: Text('Sweet'),
+                          ),
                           SizedBox(width: 8),
-                          categoryButton("Drinks"),
+                          TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              backgroundColor: Colors.white.withOpacity(0.1),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24, vertical: 12),
+                              foregroundColor: Colors.white,
+                              side: BorderSide(color: Colors.white),
+                            ),
+                            child: Text('Drinks'),
+                          ),
                         ],
                       ),
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 40),
                   Center(
                     child: Stack(
                       children: [
@@ -93,11 +144,11 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          bottom: -20,
-                          right: 20,
+                          bottom: -25,
+                          right: 5,
                           child: Image.asset(
                             'assets/grafiken/Burger_3D.png',
-                            height: 200,
+                            height: 220,
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -114,7 +165,7 @@ class HomeScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 24, vertical: 12),
+                                  horizontal: 10, vertical: 12),
                             ),
                             child: Text('Add to order'),
                           ),
@@ -154,7 +205,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-                  // Horizontal Scrolling List of Snack Cards
                   Expanded(
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -177,18 +227,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget categoryButton(String text) {
-    return TextButton(
-      onPressed: () {},
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.white.withOpacity(0.1),
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        foregroundColor: Colors.white,
-      ),
-      child: Text(text),
-    );
-  }
-
   Widget snackCard(BuildContext context, SnackItem snack) {
     return GestureDetector(
       onTap: () {
@@ -202,8 +240,8 @@ class HomeScreen extends StatelessWidget {
         );
       },
       child: Container(
-        width: 200,
-        height: 400,
+        width: 220,
+        height: 500,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
@@ -215,54 +253,79 @@ class HomeScreen extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Column(
-          children: [
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                  image: DecorationImage(
-                    image: AssetImage(snack.imagePath),
-                    fit: BoxFit.cover,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(16)),
+                    image: DecorationImage(
+                      image: AssetImage(snack.imagePath),
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    snack.name,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      snack.name,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
-                    textAlign: TextAlign.left,
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    snack.subtitle,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white.withOpacity(0.9),
+                    SizedBox(height: 4),
+                    Text(
+                      snack.subtitle,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.white.withOpacity(0.9),
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    snack.price,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    SizedBox(height: 4),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 125,
+                          child: Text(
+                            snack.price,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        Icon(
+                          Icons.favorite_border,
+                          color: Colors.white,
+                          size: 15,
+                        ),
+                        SizedBox(
+                          width: 30,
+                          child: Text(
+                            snack.likes,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -283,18 +346,21 @@ class HomeScreen extends StatelessWidget {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey.withOpacity(0.2),
-                  ),
-                  padding: EdgeInsets.all(0),
-                  child: IconButton(
-                    icon: Icon(Icons.close),
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.of(parentContext).pop();
-                    },
+                Positioned(
+                  right: 10,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey.withOpacity(0.2),
+                    ),
+                    padding: EdgeInsets.all(0),
+                    child: IconButton(
+                      icon: Icon(Icons.close),
+                      color: Colors.white,
+                      onPressed: () {
+                        Navigator.of(parentContext).pop();
+                      },
+                    ),
                   ),
                 ),
                 Image.asset(
