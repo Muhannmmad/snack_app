@@ -63,10 +63,10 @@ class HomeScreen extends StatelessWidget {
                           TextButton(
                             onPressed: () {},
                             style: TextButton.styleFrom(
-                              backgroundColor: Colors.white.withOpacity(0.1),
+                              backgroundColor: Colors.white.withOpacity(0.5),
                               padding: EdgeInsets.symmetric(
                                   horizontal: 24, vertical: 12),
-                              foregroundColor: Colors.white,
+                              foregroundColor: Colors.black,
                               side: BorderSide(color: Colors.white),
                             ),
                             child: Text('Salty'),
@@ -169,6 +169,8 @@ class HomeScreen extends StatelessWidget {
                               ),
                               padding: EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 12),
+                              shadowColor: Colors.red,
+                              elevation: 10,
                             ),
                             child: Text('Add to order'),
                           ),
