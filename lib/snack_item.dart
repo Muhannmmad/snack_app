@@ -22,7 +22,7 @@ final List<SnackItem> snacks = [
   SnackItem(
       name: "Mogli's Cup",
       subtitle: "Strawberry ice cream",
-      price: "\$8.99",
+      price: "₳ 8.99",
       rating: "4.7",
       imagePath: 'assets/grafiken/cat cupcakes_3D.png',
       description:
@@ -31,7 +31,7 @@ final List<SnackItem> snacks = [
   SnackItem(
       name: "Balu's Cup",
       subtitle: "Pistachio ice cream",
-      price: "\$8.99",
+      price: "₳ 8.99",
       rating: "4.6",
       imagePath: 'assets/grafiken/Ice.cream.png',
       description:
@@ -40,7 +40,7 @@ final List<SnackItem> snacks = [
   SnackItem(
       name: "Ice cream stick",
       subtitle: "Ice cream stick",
-      price: "\$3.99",
+      price: "₳ 3.99",
       rating: "4.6",
       imagePath: 'assets/grafiken/ice cream stick_3D.png',
       description: "Delicious stick ice cream with different tastes.",
@@ -48,7 +48,7 @@ final List<SnackItem> snacks = [
   SnackItem(
       name: "Ice cream cone",
       subtitle: "ice cream in a biscuit cone",
-      price: "\$4.99",
+      price: "₳ 4.99",
       rating: "4.6",
       imagePath: 'assets/grafiken/Icecream_3D.png',
       description:
