@@ -135,7 +135,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               SizedBox(height: 8),
                               Text(
-                                '\$13.99',
+                                '₳ 13.99',
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -525,45 +525,72 @@ class HomeScreen extends StatelessWidget {
           bottom: 120,
           left: 20,
           right: 20,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                child: Image(
-                  image: AssetImage('assets/details/Top Card.png'),
-                  width: 200,
-                  height: 50,
+          child: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ToggleButtons(
+                  isSelected: [false, false, true],
+                  selectedColor: Colors.white,
+                  color: Colors.grey,
+                  fillColor: Colors.transparent,
+                  textStyle: TextStyle(color: Colors.white, fontSize: 16),
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Text('Small'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Text('Medium'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Text('Large'),
+                    ),
+                  ],
+                  onPressed: (Null) {},
                 ),
-              ),
-              SizedBox(width: 20),
-              Row(
-                children: [
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: Icon(Icons.remove, color: Colors.white),
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.grey),
-                      shape: CircleBorder(),
+                SizedBox(width: 30),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: const Color.fromARGB(83, 255, 255, 255),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Icon(Icons.remove,
+                          size: 16,
+                          color: const Color.fromARGB(167, 255, 255, 255)),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: Text(
-                      "1",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    Container(
+                      margin: EdgeInsets.only(right: 15, left: 15),
+                      child: Text(
+                        '1',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
                     ),
-                  ),
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: Icon(Icons.add, color: Colors.white),
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.grey),
-                      shape: CircleBorder(),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                    Container(
+                      padding: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: const Color.fromARGB(80, 255, 255, 255),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Icon(Icons.add,
+                          size: 16,
+                          color: const Color.fromARGB(84, 255, 255, 255)),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
         Positioned(
