@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:snack_app/Home_screen.dart';
+import 'package:snack_app/screens/Home_screen.dart';
 
 class SnackScreen extends StatelessWidget {
   @override

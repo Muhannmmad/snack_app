@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snack_app/snack_start.dart';
+import 'package:snack_app/screens/snack_start.dart';
 
 void main() {
   runApp(Snack());
