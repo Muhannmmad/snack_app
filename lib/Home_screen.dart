@@ -530,7 +530,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Container(
                 child: Image(
-                  image: AssetImage('assets/details/button.png'),
+                  image: AssetImage('assets/details/Top Card.png'),
                   width: 200,
                   height: 50,
                 ),
