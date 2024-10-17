@@ -49,21 +49,22 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
         ),
       ),
       Positioned(
-        top: 230,
+        top: 190,
         left: 20,
         right: 20,
-        bottom: 250,
+        bottom: 270,
         child: Center(
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(15.0),
+            borderRadius: BorderRadius.circular(25.0),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.3),
+                  color:
+                      const Color.fromARGB(65, 108, 106, 106).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                padding: const EdgeInsets.all(20.0),
+                padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
                 child: Column(
                   children: [
                     Text(
@@ -76,15 +77,15 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      snack.subtitle,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                    SizedBox(height: 16),
-                    Text(
                       snack.description,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Text(
+                      'There are different types with different tastes with different sizes so that you can choose what is sutable for you',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
@@ -101,10 +102,12 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 70,
                       child: Divider(
                         color: const Color.fromARGB(84, 255, 255, 255),
                         thickness: 1,
+                        indent: 15,
+                        endIndent: 15,
                       ),
                     ),
                   ],
@@ -115,13 +118,13 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
         ),
       ),
       Positioned(
-        height: 500,
+        height: 450,
         right: 40,
         child: Row(
           children: [
             Icon(
               Icons.favorite_border,
-              color: const Color.fromARGB(70, 255, 255, 255),
+              color: const Color.fromARGB(86, 255, 255, 255),
               size: 15,
             ),
             SizedBox(
@@ -130,7 +133,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                 snack.likes,
                 style: TextStyle(
                   fontSize: 14,
-                  color: const Color.fromARGB(61, 255, 255, 255),
+                  color: const Color.fromARGB(86, 255, 255, 255),
                 ),
               ),
             ),
@@ -194,7 +197,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
         ),
       ),
       Positioned(
-        bottom: 120,
+        bottom: 130,
         left: 0,
         right: 0,
         child: Container(
