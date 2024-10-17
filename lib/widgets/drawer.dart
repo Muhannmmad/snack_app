@@ -170,7 +170,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     Icon(Icons.local_fire_department,
                         size: 18, color: Colors.white),
                     SizedBox(width: 6),
-                    Icon(Icons.location_on, size: 18, color: Colors.white),
+                    Icon(Icons.casino, size: 18, color: Colors.white),
                   ],
                 ),
                 Row(
@@ -218,7 +218,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                       child: Text(
                         'Small',
                         style: TextStyle(
-                            color: const Color.fromARGB(91, 255, 255, 255),
+                            color: const Color.fromARGB(182, 255, 255, 255),
                             fontSize: 14),
                       ),
                     ),
@@ -267,6 +267,8 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     padding: EdgeInsets.all(6.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
+                      color: const Color.fromARGB(20, 255, 255, 255)
+                          .withOpacity(0.1),
                       border: Border.all(
                         color: const Color.fromARGB(83, 255, 255, 255),
                         width: 1.0,
@@ -274,7 +276,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     ),
                     child: Icon(Icons.remove,
                         size: 16,
-                        color: const Color.fromARGB(167, 255, 255, 255)),
+                        color: const Color.fromARGB(200, 255, 255, 255)),
                   ),
                   Container(
                     margin: EdgeInsets.only(right: 15, left: 15),
@@ -287,6 +289,8 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     padding: EdgeInsets.all(6.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
+                      color: const Color.fromARGB(20, 255, 255, 255)
+                          .withOpacity(0.1),
                       border: Border.all(
                         color: const Color.fromARGB(80, 255, 255, 255),
                         width: 1.0,
@@ -294,7 +298,7 @@ Widget snackDrawer(SnackItem snack, BuildContext parentContext) {
                     ),
                     child: Icon(Icons.add,
                         size: 16,
-                        color: const Color.fromARGB(84, 255, 255, 255)),
+                        color: const Color.fromARGB(188, 255, 255, 255)),
                   )
                 ],
               ),
